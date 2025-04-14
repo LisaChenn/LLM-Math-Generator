@@ -1,0 +1,6 @@
+name = "LLM-Math-Generator"
+version = "0.1.0"
+defaultTargets = ["LLMMathGenerator"]
+
+[[lean_lib]]
+name = "LLMMathGenerator"
