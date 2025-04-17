@@ -8,9 +8,11 @@ A language model-powered math problem generator that ensures each question has a
 
 ### 1. Install Dependencies
 
+INSTALLS OPENAI API
 ```bash
 pip install openai 
 ```
+INSTALLS DATASETS FROM GMS8K
 ```bash
 pip install datasets
 ```
