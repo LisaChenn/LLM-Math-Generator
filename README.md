@@ -9,4 +9,8 @@ A language model-powered math problem generator that ensures each question has a
 ### 1. Install Dependencies
 
 ```bash
-pip install openai datasets
+pip install openai 
+```
+```bash
+pip install datasets
+```
