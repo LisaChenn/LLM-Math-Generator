@@ -8,6 +8,7 @@ import random
 import random
 from datasets import load_dataset
 import numpy as np
+import os
 
 #-------------------------------------------------------------------
 #   Load Dataset in GSM8K
@@ -19,7 +20,8 @@ example = gsm8k['train'][0]['question']
 #   Load ENV API KEY and OpenAI API Client
 #-------------------------------------------------------------------
 load_dotenv()
-client = OpenAI()
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+
 
 print("Loading Client...\n")
 

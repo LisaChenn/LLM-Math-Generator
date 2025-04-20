@@ -4,6 +4,8 @@
 from datasets import load_dataset
 from openai import OpenAI
 from dotenv import load_dotenv
+import os
+
 
 #Counter for how Many Trues
 counter = 0
@@ -15,8 +17,7 @@ dataset = load_dataset("openai/gsm8k", "main", split="train")
 subset = dataset.select(range(7473))
 
 load_dotenv()
-client = OpenAI()
-
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 #-------------------------------------------------------------------
 #  FUNCTIONS
@@ -45,7 +46,8 @@ def check_Linear_System(client, problem):
 #   RUN CODE
 #-------------------------------------------------------------------
 for i in range(7473):
+    print("Number: ", i)
+    print("Counter: ", counter)  
     if(check_Linear_System(client, subset[i]['question']) == 'True'):
         counter += 1
-
-print(counter)
+    
